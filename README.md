@@ -5,7 +5,7 @@
 # Ejecutar en desarrollo
 
 1. Clonar el repositorio
-2. Ejecutar
+2. Instalar dependencias
     ```shell
     npm install
     ```
@@ -13,9 +13,13 @@
     ```shell
     npm i -g @nestjs/cli
     ```
-3. Levantar la base de datos
+4. Levantar la base de datos
     ```shell
     docker-compose up -d
+    ```
+5. Ejecutar
+    ```shell
+    npm run start:dev
     ```
 
 ## Stack usado
