@@ -17,6 +17,10 @@
     ```shell
     docker-compose up -d
     ```
+5. Reconstruir la base de datos con la semilla
+    ```shell
+   http://localhost:3000/api/v2/seed
+    ```
 5. Ejecutar
     ```shell
     npm run start:dev
