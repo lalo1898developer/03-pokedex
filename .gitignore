@@ -36,3 +36,6 @@ lerna-debug.log*
 
 # Mongo Volume
 /mongo
+
+# Enviroment
+.env
