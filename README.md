@@ -2,7 +2,7 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-# Ejecutar en desarrollo
+# Ejecutar en desarrollo local
 
 1. Clonar el repositorio
 2. Instalar dependencias
@@ -28,6 +28,30 @@
 8. Reconstruir la base de datos con la semilla
     ```shell
    http://localhost:3000/api/v2/seed
+    ```
+
+# Ejecutar en desarrollo Docker
+1. Crear el archivo ```.env.dev```
+2. Llenar las variables del entorno
+3. Ejecutar para crear imagen
+    ```shell
+    docker-compose -f docker-compose.dev.yaml --env-file .env.dev build
+    ```
+4. Ejecutar para correr contenedor
+    ```shell
+    docker-compose -f docker-compose.dev.yaml --env-file .env.dev up
+    ```
+
+# Ejecutar en produccion Docker
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables del entorno
+3. Ejecutar para crear imagen
+    ```shell
+    docker-compose -f docker-compose.prod.yaml --env-file .env.prod build
+    ```
+4. Ejecutar para correr contenedor
+    ```shell
+    docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
     ```
 
 ## Stack usado
