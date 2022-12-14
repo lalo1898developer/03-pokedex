@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  pokedexapp:
+    build: 
+      context: .
+      dockerfile: Dockerfile.prod
+    image: pokedex-docker
+    container_name: pokedexapp
+    restart: always # reiniciar el contenedor si se detiene
+    ports:
+      - "${PORT}:${PORT}"
+    # working_dir: /var/www/pokedex
+    environment:
+      MONGODB_URL: ${MONGODB_URL}
+      PORT: ${PORT}
+      MONGODB_DEFAULT_LIMIT: ${MONGODB_DEFAULT_LIMIT}
+    # volumes:
+    #   - ./:/var/www/pokedex
